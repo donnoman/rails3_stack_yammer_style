@@ -20,6 +20,7 @@ gem "rspec-rails"
 
 group :development do
   gem "ruby-debug"
+  gem "capistrano"
 #  gem "ruby-debug19"
 #  gem "looksee"
 #  gem "wirble"
