@@ -1,0 +1,14 @@
+development:
+  bucket: app-development
+  access_key_id: XXXXXXXXXXXXXXXXXXXX
+  secret_access_key: yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+
+test:
+  bucket: app-test
+  access_key_id: XXXXXXXXXXXXXXXXXXXX
+  secret_access_key: yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+
+production:
+  bucket: app-production
+  access_key_id: XXXXXXXXXXXXXXXXXXXX
+  secret_access_key: yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
