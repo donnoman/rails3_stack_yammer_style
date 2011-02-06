@@ -1,10 +1,16 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
+if File.exists?(recipes_path = "../cap-recipes")
+  gem 'cap-recipes', :path => recipes_path, :require => false
+else
+  gem 'cap-recipes', :git => "git@github.com:donnoman/cap-recipes.git", :branch => "testing",  :require => false
+end
 
 #gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "haml"
 gem "haml-rails"
+gem 'resque'
 #gem "simple_form"
 #gem "responders"
 #gem "devise"
