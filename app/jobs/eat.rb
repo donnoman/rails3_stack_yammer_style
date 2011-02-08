@@ -1,7 +1,7 @@
-module Eat
+class Eat
   @queue = :food
 
-  def perform(food)
+  def self.perform(food)
     puts "Ate #{food}!"
   end
 end

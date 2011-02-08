@@ -4,7 +4,7 @@
 # Be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 development:
-  adapter: mysql
+  adapter: mysql2
   database: homerun-development
   host: localhost
   username: root
@@ -16,7 +16,7 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test: &TEST
-  adapter: mysql
+  adapter: mysql2
   database: homerun-test
   host: localhost
   username: root
@@ -25,7 +25,7 @@ test: &TEST
   timeout: 5000
 
 production:
-  adapter: mysql
+  adapter: mysql2
   database: homerun-production
   host: localhost
   username: root

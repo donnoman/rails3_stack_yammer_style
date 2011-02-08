@@ -7,11 +7,16 @@ else
   gem 'cap-recipes', :git => "git@github.com:donnoman/cap-recipes.git", :branch => "testing",  :require => false
 end
 
-#gem 'sqlite3-ruby', :require => 'sqlite3'
+gem 'mysql2'
 gem "unicorn"
 gem "haml"
 gem "haml-rails"
+#http://blog.redistogo.com/2010/07/26/resque-with-redis-to-go/
 gem 'resque'
+#http://blog.redistogo.com/2010/08/05/resque-scheduler/
+gem 'resque-scheduler'
+#WARNING: using the built-in Timeout class which is known to have issues when used for opening connections. Install the SystemTimer gem if you want to make sure the Redis client will not hang.
+gem "SystemTimer", :require => "system_timer", :platforms => :ruby_18
 #gem "simple_form"
 #gem "responders"
 #gem "devise"

@@ -9,7 +9,8 @@ require 'cap_recipes/tasks/redis'
 require 'cap_recipes/tasks/postfix'
 require 'cap_recipes/tasks/mysql'
 require 'cap_recipes/tasks/cassandra'
-require 'cap_recipes/tasks/unicorn'
+require 'cap_recipes/tasks/unicorn/manage'
+require 'cap_repipes/tasks/resque/manage'
 
 # =============================================================================
 # CAPISTRANO CONFIGURATION
@@ -32,8 +33,6 @@ ssh_options[:forward_agent] = true
 
 require 'config/secrets'
 
-#worker: rake resque:work QUEUE=*
-
 namespace :deploy do
   desc "Provision the servers"
   task :provision do
@@ -41,6 +40,7 @@ namespace :deploy do
     redis.install
     postfix.install
     mysql.install
+    mysql.install_dev_libs #needed to build mysql2 gem
     cassandra.install
   end
 end
