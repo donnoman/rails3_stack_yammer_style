@@ -1,7 +1,7 @@
 PATH
   remote: ../cap-recipes
   specs:
-    cap-recipes (0.3.36)
+    cap-recipes (0.3.37)
 
 GEM
   remote: http://rubygems.org/
@@ -54,6 +54,7 @@ GEM
     highline (1.6.1)
     i18n (0.5.0)
     json (1.4.6)
+    kgio (2.2.0)
     linecache (0.43)
     mail (2.2.15)
       activesupport (>= 2.3.6)
@@ -122,6 +123,9 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.24)
+    unicorn (3.4.0)
+      kgio (~> 2.2)
+      rack
     vegas (0.1.8)
       rack (>= 1.0.0)
 
@@ -138,3 +142,4 @@ DEPENDENCIES
   rspec
   rspec-rails
   ruby-debug
+  unicorn

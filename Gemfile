@@ -8,6 +8,7 @@ else
 end
 
 #gem 'sqlite3-ruby', :require => 'sqlite3'
+gem "unicorn"
 gem "haml"
 gem "haml-rails"
 gem 'resque'
