@@ -1,12 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
-if File.exists?(recipes_path = "../cap-recipes")
-  gem 'cap-recipes', :path => recipes_path, :require => false
-else
-  gem 'cap-recipes', :git => "git://github.com/donnoman/cap-recipes.git", :branch => "testing",  :require => false
-end
-
 gem 'mysql2'
 gem "unicorn"
 gem "haml"
@@ -33,6 +27,11 @@ gem "rspec-rails"
 group :development do
   gem "ruby-debug"
   gem "capistrano"
+if File.exists?(recipes_path = "../cap-recipes")
+  gem 'cap-recipes', :path => recipes_path, :require => false
+else
+  gem 'cap-recipes', :git => "git://github.com/donnoman/cap-recipes.git", :branch => "testing",  :require => false
+end
 #  gem "ruby-debug19"
 #  gem "looksee"
 #  gem "wirble"
