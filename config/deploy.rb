@@ -5,12 +5,9 @@
 
 require 'rubygems'
 require 'cap_recipes/tasks/ree'
-require 'cap_recipes/tasks/redis'
 require 'cap_recipes/tasks/postfix'
-require 'cap_recipes/tasks/mysql'
 require 'cap_recipes/tasks/cassandra'
 require 'cap_recipes/tasks/unicorn/manage'
-require 'cap_recipes/tasks/resque/manage'
 require 'cap_recipes/tasks/gitosis'
 
 # =============================================================================
@@ -41,8 +38,6 @@ namespace :deploy do
     ree.install
     redis.install
     postfix.install
-    mysql.install
-    mysql.install_dev_libs #needed to build mysql2 gem
     cassandra.install
   end
 
